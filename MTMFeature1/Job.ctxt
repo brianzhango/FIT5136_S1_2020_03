@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Job
+comment0.text=\nJob\ required\ for\ a\ mission\n\ \nDongheng\ Zhan\n18/05/2020\n
+comment1.params=
+comment1.target=Job()
+comment2.params=jobName\ jobDescription
+comment2.target=Job(java.lang.String,\ java.lang.String)
+comment3.params=jobName
+comment3.target=void\ setJobName(java.lang.String)
+comment4.params=jobDescription
+comment4.target=void\ setJobDescription(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getJobName()
+comment6.params=
+comment6.target=java.lang.String\ getJobDescription()
+numComments=7

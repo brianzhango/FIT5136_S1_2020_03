@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Cargo
+comment0.text=\nCargo\ requirements\n\ \n\ Dongheng\ Zhan\n\ 18/5/2020\n
+comment1.params=
+comment1.target=void\ Cargo()
+comment2.params=cargoRequirements
+comment2.target=Cargo(java.lang.String)
+comment3.params=cargoRequirements
+comment3.target=void\ setCargoRequirements(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getCargoRequirements()
+numComments=5
