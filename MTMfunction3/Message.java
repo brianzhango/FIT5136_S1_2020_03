@@ -5,14 +5,14 @@ public class Message {
     private int recruitmentId;
     private String content;
 
-    public void Criteria()
+    public void Message()
     {
         messageId = 0;
         recruitmentId = 0;
-        content = "";
+        content = "1";
     }
 
-    public void Criteria(int id, int id2, String con)
+    public void Message(int id, int id2, String con)
     {
         messageId = id;
         recruitmentId = id2;
@@ -32,5 +32,20 @@ public class Message {
     public String getContent()
     {
         return content;
+    }
+
+    public void setMessageId(int id1)
+    {
+        messageId = id1;
+    }
+
+    public void setRecruitmentId(int recID)
+    {
+        recruitmentId = recID;
+    }
+
+    public void setContent(String con)
+    {
+        content = con;
     }
 }

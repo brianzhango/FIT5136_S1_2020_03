@@ -55,10 +55,14 @@
       <option name="presentableId" value="Default" />
       <updated>1589785453574</updated>
       <workItem from="1589785455279" duration="4531000" />
+<<<<<<< Updated upstream
       <workItem from="1589805066861" duration="29000" />
       <workItem from="1589805105528" duration="3000" />
       <workItem from="1589849770097" duration="46000" />
       <workItem from="1589852447642" duration="30000" />
+=======
+      <workItem from="1589864847047" duration="737000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -77,5 +81,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="390" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589865365890">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="390" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589865365890" />
   </component>
 </project>
