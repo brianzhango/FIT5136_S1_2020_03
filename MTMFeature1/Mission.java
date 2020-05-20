@@ -18,7 +18,7 @@ public class Mission
     int missionDuration;
     String missionStatus;
 
-    public void Mission()
+    public Mission()
     {
        missionID = 0;
        missionName = "";
@@ -45,6 +45,60 @@ public class Mission
         this.missionStatus = missionStatus;
     }
 
+    public void StartMission(String name, int id)
+    {
+       System.out.print('\u000C');
+       String select;
+       Display display = new Display();
+       display.displayMenu("Welcome to Mission to Mars System !（please input number!）");
+       select = display.acceptStringInput("  What do you want to do?\n" + 
+                                           "  1.Create a mission\n" + 
+                                           "  2.Select a mission\n" +
+                                           "  0.Exit");
+       Judge(select);
+       if(select.equals("1"))
+       {
+           
+       }
+       if(select.equals("2"))
+       {
+           
+       }
+    }
+    
+    public String Judge(String select)
+    {
+        int flag = 0;
+        Display display = new Display();
+        while(flag == 0){
+        if(select.equals("1"))
+        {
+            System.out.println("Start creating mission !  Your  mission ID is xxxx");
+            flag = 1;
+        }
+        else if(select.equals("2"))
+        {     
+            System.out.println("");
+            flag = 1;
+        }      
+        else if(select.equals("0"))
+        {     
+             System.exit(0);
+        }      
+        else
+        {
+           select = display.acceptStringInput("Please input a correct number!");
+        }
+        }
+        return select;
+    }
+    
+    public void creatMission()
+    {
+      Display display = new Display();
+      
+      
+    }
     public void setMissionID(int missionID) {
         this.missionID = missionID;
     }

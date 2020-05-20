@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9317e84f-e1f1-42e4-b660-ec16466774c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTMFeature1/Mission.class" beforeDir="false" afterPath="$PROJECT_DIR$/MTMFeature1/Mission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTMFeature1/Mission.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/MTMFeature1/Mission.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTMFeature1/Mission.java" beforeDir="false" afterPath="$PROJECT_DIR$/MTMFeature1/Mission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTMFeature1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/MTMFeature1/package.bluej" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +35,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,8 +70,12 @@
       <workItem from="1589805105528" duration="3000" />
       <workItem from="1589849770097" duration="46000" />
       <workItem from="1589852447642" duration="30000" />
+<<<<<<< Updated upstream
 =======
       <workItem from="1589864847047" duration="737000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1589886235201" duration="1137000" />
 >>>>>>> Stashed changes
     </task>
     <servers />
