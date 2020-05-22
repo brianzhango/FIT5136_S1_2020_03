@@ -1,3 +1,5 @@
+package user;
+
 public class MissionCoordinator extends User {
     private String coordinatorId;
     private String coordinatorName;

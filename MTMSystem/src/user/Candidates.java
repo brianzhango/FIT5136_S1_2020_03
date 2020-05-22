@@ -1,3 +1,5 @@
+package user;
+
 public class Candidates extends User {
     private String name;
     private String dateOfBirth;

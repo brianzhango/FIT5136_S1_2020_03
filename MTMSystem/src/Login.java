@@ -1,22 +1,18 @@
 import java.util.*;
+import user.User;
 
 public class Login {
 
-    public static void login(){
-        Scanner scanner = new Scanner(System.in);
-        String username1 = "123";
-        String password1 = "123";
+    public static boolean login(String username, String password, List<User> list){
+       boolean flag = false;
 
-        System.out.println("Please enter your username: ");
-        String username = scanner.next();
-
-        System.out.println("Please enter your password: ");
-        String password = scanner.next();
-
-        if(username.equals(username1) && password.equals(password1))
-            System.out.println("You are logged in!");
-        else
-            System.out.println("Error!");
-
+       for (User s : list) {
+           if ((s.getUsername().equals(username)) && (s.getPassword().equals(password)))
+           {
+             flag = true;
+             break;
+           }
+       }
+       return flag;
     }
 }
