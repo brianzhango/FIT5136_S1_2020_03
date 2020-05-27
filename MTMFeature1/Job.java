@@ -10,17 +10,18 @@ public class Job
    
     private String jobName;
     private String jobDescription;
-
-    
+    private ArrayList<Employment> emp;
     public Job()
     {
        jobName = "";
        jobDescription = "";
+       emp = new ArrayList<Employment>();
     }
 
-    public Job(String jobName, String jobDescription) {
+    public Job(String jobName, String jobDescription, ArrayList<Employment> emp) {
         this.jobName = jobName;
         this.jobDescription = jobDescription;
+        this.emp = emp;
     }
 
     public void setJobName(String jobName) {
@@ -31,11 +32,22 @@ public class Job
         this.jobDescription = jobDescription;
     }
 
+    public void setEMP(String title, int numberForEachJob)
+    {
+       Employment Emp;
+       Emp = new Employment(title,numberForEachJob);
+       emp.add(Emp);
+    }
+    
     public String getJobName() {
         return jobName;
     }
 
     public String getJobDescription() {
         return jobDescription;
+    }
+
+    public ArrayList<Employment> getEmp() {
+        return emp;
     }
 }
