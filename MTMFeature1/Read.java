@@ -11,7 +11,9 @@ import java.util.*;
 public class Read
 {
    private  String fileName = "Mission.xlsx";
-    public List<Mission> read() 
+    public void a (){
+    System.out.print('\u000C');}
+    public List<Mission> read() throws EncryptedDocumentException, IOException
     {
         Mission mission;
         List<Mission> list = new ArrayList<Mission> ();
@@ -20,8 +22,7 @@ public class Read
         File xlsxFile = new File(fileName);
         if (!xlsxFile.exists())
             return null;
-        try{
-            Workbook workbook = WorkbookFactory.create(xlsxFile);
+        Workbook workbook = WorkbookFactory.create(xlsxFile);
         DataFormatter dataFormatter = new DataFormatter();
         int numberOfSheets = workbook.getNumberOfSheets();
         if (numberOfSheets <= 0)
@@ -33,9 +34,6 @@ public class Read
             mission = new Mission((int)Double.parseDouble(String.valueOf(r.getCell(0))),String.valueOf(r.getCell(1)),String.valueOf(r.getCell(2)),String.valueOf(r.getCell(3)),String.valueOf(r.getCell(4)),String.valueOf(r.getCell(5)),String.valueOf(r.getCell(6)),String.valueOf(r.getCell(7)),String.valueOf(r.getCell(8)),String.valueOf(r.getCell(9)),String.valueOf(r.getCell(10)),(int)Double.parseDouble(String.valueOf(r.getCell(11))),String.valueOf(r.getCell(12)));
             list.add(mission);
         } 
-        }catch(Exception e){
-            e.printStackTrace();
-        }
         return list;
     }
 }

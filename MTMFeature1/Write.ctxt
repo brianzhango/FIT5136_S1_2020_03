@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=Write
 comment0.text=\n\ Write\ in\ exale\n\ \n\ Dongheng\ Zhan\n\ 24/5/2020\n
-comment1.params=list\ n
-comment1.target=void\ write(java.util.List,\ int)
-comment2.params=mission\ sheet\ n
-comment2.target=void\ createCell(Mission,\ org.apache.poi.hssf.usermodel.HSSFSheet,\ int)
-numComments=3
+comment1.params=list\ location\ position
+comment1.target=void\ write(java.util.List,\ int,\ int)
+comment2.params=location
+comment2.target=void\ delete(int)
+comment3.params=mission\ sheet\ n
+comment3.target=void\ createCell(Mission,\ org.apache.poi.hssf.usermodel.HSSFSheet,\ int)
+numComments=4

@@ -12,28 +12,35 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
  */
 public class Write
 {
-     public void write(List<Mission> list , int n) throws IOException 
+  public void write(List<Mission> list , int location ,int position) throws IOException 
      {
-        FileInputStream fs=new FileInputStream("Mission.xlsx");
+        FileInputStream fs=new FileInputStream("Mission2.xlsx");
         POIFSFileSystem ps=new POIFSFileSystem(fs);
         HSSFWorkbook wb=new HSSFWorkbook(ps);
         HSSFSheet sheet=wb.getSheetAt(0);
-        if( n <sheet.getLastRowNum())
-        try{HSSFRow row = sheet.getRow(n);
+        FileOutputStream out = new FileOutputStream("Mission2.xlsx");
+        createCell(list.get(location),sheet,position);
+        out.flush();
+	wb.write(out);  
+	out.close(); 
+    }
+  
+  public void delete(int location) throws IOException 
+     {
+        FileInputStream fs=new FileInputStream("Mission2.xlsx");
+        POIFSFileSystem ps=new POIFSFileSystem(fs);
+        HSSFWorkbook wb=new HSSFWorkbook(ps);
+        HSSFSheet sheet=wb.getSheetAt(0);
+        FileOutputStream out = new FileOutputStream("Mission2.xlsx");
+          try{HSSFRow row = sheet.getRow(location);
         sheet.removeRow(row);
-        FileOutputStream os = new FileOutputStream("Mission.xlsx");  
+        FileOutputStream os = new FileOutputStream("Mission2.xlsx");  
         wb.write(os);
         os.close();
         }catch (Exception e) {   
             e.printStackTrace();  
         }  
-        FileOutputStream out = new FileOutputStream("Mission.xlsx");
-        createCell(list.get(n),sheet,n);
-        out.flush();
-	wb.write(out);  
-	out.close(); 
     }
-    
   private void createCell(Mission mission, HSSFSheet sheet,int n) {
         HSSFRow dataRow = sheet.createRow(n);
         dataRow.createCell(0).setCellValue(mission.getMissionID());
