@@ -10,14 +10,15 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/5136/FIT5136_S1_2020_03/MTMfeature1/+libs" />
+          <root url="file://$MODULE_DIR$/../MTMfeature1/+libs" />
         </CLASSES>
         <JAVADOC>
-          <root url="file://$USER_HOME$/5136/FIT5136_S1_2020_03/MTMfeature1/+libs/poi-4.1.2/docs/apidocs/dev" />
+          <root url="file://$MODULE_DIR$/../MTMfeature1/+libs/poi-4.1.2/docs/apidocs/dev" />
         </JAVADOC>
         <SOURCES />
-        <jarDirectory url="file://$USER_HOME$/5136/FIT5136_S1_2020_03/MTMfeature1/+libs" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../MTMfeature1/+libs" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
