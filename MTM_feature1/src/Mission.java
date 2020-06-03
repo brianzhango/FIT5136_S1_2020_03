@@ -2,6 +2,7 @@ import org.apache.poi.*;
 import org.apache.poi.ss.usermodel.*;
 import java.io.*;
 import java.util.*;
+import java.text.*;
 /**
  * Mission
  *
@@ -110,7 +111,7 @@ public class Mission
         inputCoordinatorName(display);
         inputCCI(display);
         inputJob (joblist);
-        ipnutCargoRequirements(display);
+        inputCargoRequirements(display);
         inputLaunchDate(display);
         inputDestinationLocation(display);
         inputMissionDuration(display);
@@ -269,7 +270,7 @@ public class Mission
                         flag3 = 0;
                     }catch(NumberFormatException e)
                     {
-                        System.out.println("please input a correcet number!");
+                        System.out.println("please input a correct number!");
                     }
                 }
                 job.setEMP(title,number);
@@ -302,7 +303,7 @@ public class Mission
         setJob(jobs);
     }
 
-    public void ipnutCargoRequirements(Display display)
+    public void inputCargoRequirements(Display display)
     {
         String R = "x";
         while (R.equals("a") == false && R.equals("b") == false &&
@@ -312,7 +313,7 @@ public class Mission
         {
             R = display.acceptStringInput("8.Cargo requirements \n"+ "a. For the journey \n" +
                     "b. For the mission \n" + "c. For other missions \n" +
-                    "Mutiple choice,just input letter in order" );
+                    "Multiple choice,just input letter in order" );
             judgeQuit(R);
         }
         if(R.equals("a"))
@@ -351,7 +352,19 @@ public class Mission
         String launchDate;
         launchDate = display.acceptStringInput("9. Please input Launch date as given format dd-mm-yyyy");
         judgeQuit(launchDate);
-        setLaunchDate(launchDate);
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        boolean flag = false;
+        while(flag == false) {
+            try {
+                formatter.setLenient(false);
+                Date date = formatter.parse(launchDate);
+                setLaunchDate(launchDate);
+                flag = true;
+            } catch (Exception e) {
+                display.displayMenu("Please follow the requirement");
+                launchDate = display.acceptStringInput("9. Please input Launch date as given format dd-mm-yyyy");
+            }
+        }
     }
 
     public void inputDestinationLocation(Display display)
@@ -375,7 +388,7 @@ public class Mission
                 setMissionDuration(m);
             }catch (NumberFormatException e)
             {
-                System.out.println("please input a correcet number!");
+                System.out.println("please input a correct number!");
             }
         }
     }
@@ -426,7 +439,7 @@ public class Mission
                 "\n 3.Country of Origin: " + list.get(location).getCountryOfOrigin() +
                 "\n 4.Countries Allowed: " + list.get(location).getCountriesAllowed() +
                 "\n 5.Coordinator Name: " + list.get(location).getCoordinatorName() +
-                "\n 6.Coordinator Contect Information: " + list.get(location).getCCI() +
+                "\n 6.Coordinator Contact Information: " + list.get(location).getCCI() +
                 "\n 7.Jobs: " + list.get(location).getJob() +
                 "\n 8.Cargo Requirements: " + list.get(location).getCargoRequirements() +
                 "\n 9.Launch Date: " + list.get(location).getLaunchDate() +
@@ -449,7 +462,7 @@ public class Mission
                 n1 = Integer.parseInt(n);
             }catch (NumberFormatException e)
             {
-                System.out.println("please input a correcet number!");
+                System.out.println("please input a correct number!");
             }
         }
         return n1;
@@ -496,7 +509,7 @@ public class Mission
                 i = check(display,list,place);
             }
             if(i == 8){
-                ipnutCargoRequirements(display);
+                inputCargoRequirements(display);
                 list.get(place).setCargoRequirements(cargoRequirements);
                 i = check(display,list,place);
             }
@@ -534,7 +547,7 @@ public class Mission
             try{
                 modifyNumber = Integer.parseInt(select);
             }catch(NumberFormatException e){
-                System.out.println("please input a correcet number!");
+                System.out.println("please input a correct number!");
             }
 
         }
@@ -558,7 +571,7 @@ public class Mission
             try{
                 selection = Integer.parseInt(select);
             }catch(NumberFormatException e){
-                System.out.println("please input a correcet number!");
+                System.out.println("please input a correct number!");
             }
 
         }
