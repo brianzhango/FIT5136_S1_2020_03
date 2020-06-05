@@ -145,9 +145,22 @@ public class Mission
         change(display, changeNumber,list, joblist,n);
     }
 
-    public void handleCheck(List<Mission> list,Display display,int n,List<Job> joblist,int changeNumber)
-    {
+    public void setMission(List<Mission> list,Display display,int n,List<Job> joblist,int changeNumber){
+        setMissionID(list.get(n).getMissionID());
+        setMissionName(list.get(n).getMissionName());
+        setDescription(list.get(n).getDescription());
+        setCountryOfOrigin(list.get(n).getCountryOfOrigin());
+        setCountriesAllowed(list.get(n).getCountriesAllowed());
+        setCoordinatorName(list.get(n).getCoordinatorName());
+        setCCI(list.get(n).getCCI());
+        setJob(list.get(n).getJob());
+        setCargoRequirements(list.get(n).getCargoRequirements());
+        setLaunchDate(list.get(n).getLaunchDate());
+        setDestinationLocation(list.get(n).getDestinationLocation());
+        setMissionDuration(list.get(n).getMissionDuration());
+        setMissionStatus(list.get(n).getMissionStatus());
     }
+    
     public int Judge(String select,Display display)
     {
         int flag = 0;
