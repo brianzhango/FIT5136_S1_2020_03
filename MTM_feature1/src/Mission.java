@@ -145,9 +145,22 @@ public class Mission
         change(display, changeNumber,list, joblist,n);
     }
 
-    public void handleCheck(List<Mission> list,Display display,int n,List<Job> joblist,int changeNumber)
-    {
+    public void setMission(List<Mission> list,Display display,int n,List<Job> joblist,int changeNumber){
+        setMissionID(list.get(n).getMissionID());
+        setMissionName(list.get(n).getMissionName());
+        setDescription(list.get(n).getDescription());
+        setCountryOfOrigin(list.get(n).getCountryOfOrigin());
+        setCountriesAllowed(list.get(n).getCountriesAllowed());
+        setCoordinatorName(list.get(n).getCoordinatorName());
+        setCCI(list.get(n).getCCI());
+        setJob(list.get(n).getJob());
+        setCargoRequirements(list.get(n).getCargoRequirements());
+        setLaunchDate(list.get(n).getLaunchDate());
+        setDestinationLocation(list.get(n).getDestinationLocation());
+        setMissionDuration(list.get(n).getMissionDuration());
+        setMissionStatus(list.get(n).getMissionStatus());
     }
+
     public int Judge(String select,Display display)
     {
         int flag = 0;
@@ -536,7 +549,37 @@ public class Mission
         }
 
     }
-
+    public ArrayList<String[]> getJobList(int n)
+    {
+        String jobList;
+        Read READ = new Read();
+        List<Mission> M = new ArrayList<Mission>();
+        jobList = M.get(n).getJob();
+        String[] A = jobList.split("\n");
+        String[] B = new String[100];
+        String[] C = new String[100];
+        ArrayList<String[]> JobList = new ArrayList<String[]>();
+        for(int i = 0; i<A.length;i++)
+        {
+            int k = 0;
+            int y = 0;
+            if(A[i].contains("JOB:"))
+            {
+               A[i] = A[i].replace("JOB:","");
+               B[k] = A[i];
+               k++;
+            }
+            if(A[i].contains("JOB Description:"))
+            {
+                A[i] = A[i].replace("JOB:","");
+                C[y] = A[i];
+                y++;
+            }
+        }
+        JobList.add(B);
+        JobList.add(C);
+        return JobList;
+    }
     public int modify(List<Mission> list,Display display)
     {
         int modifyNumber = 0;
