@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b721dbad-a42f-45eb-9631-7d609ebe880e" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,134 +42,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature3/Criteria.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/UserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature/Display.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature/Read.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
-              <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature/Write.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" column="96" selection-start-line="38" selection-start-column="96" selection-end-line="38" selection-end-column="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature/Mission.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="112" column="26" lean-forward="true" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
-              <folding>
-                <element signature="e#22221#22222#0" expanded="true" />
-                <element signature="e#22321#22322#0" expanded="true" />
-                <element signature="e#22421#22422#0" expanded="true" />
-                <element signature="e#22537#22538#0" expanded="true" />
-                <element signature="e#22657#22658#0" expanded="true" />
-                <element signature="e#22773#22774#0" expanded="true" />
-                <element signature="e#22842#22843#0" expanded="true" />
-                <element signature="e#22938#22939#0" expanded="true" />
-                <element signature="e#23070#23071#0" expanded="true" />
-                <element signature="e#23183#23184#0" expanded="true" />
-                <element signature="e#23251#23252#0" expanded="true" />
-                <element signature="e#23375#23376#0" expanded="true" />
-                <element signature="e#23483#23484#0" expanded="true" />
-                <element signature="e#23549#23550#0" expanded="true" />
-                <element signature="e#23621#23622#0" expanded="true" />
-                <element signature="e#23693#23694#0" expanded="true" />
-                <element signature="e#23773#23774#0" expanded="true" />
-                <element signature="e#23855#23856#0" expanded="true" />
-                <element signature="e#23935#23936#0" expanded="true" />
-                <element signature="e#23991#23992#0" expanded="true" />
-                <element signature="e#24061#24062#0" expanded="true" />
-                <element signature="e#24149#24150#0" expanded="true" />
-                <element signature="e#24226#24227#0" expanded="true" />
-                <element signature="e#24302#24303#0" expanded="true" />
-                <element signature="e#24358#24359#0" expanded="true" />
-                <element signature="e#24442#24443#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature3/Administrator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-292">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature3/Job.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature2/SpaceShuttle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-130">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -161,78 +49,19 @@
       </list>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/User.java" />
-        <option value="$PROJECT_DIR$/Candidates.java" />
-        <option value="$PROJECT_DIR$/MissionCoordinator.java" />
-        <option value="$PROJECT_DIR$/Login.java" />
-        <option value="$PROJECT_DIR$/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/Candidates.java" />
-        <option value="$PROJECT_DIR$/src/ReadExcel.java" />
-        <option value="$PROJECT_DIR$/src/123.txt" />
-        <option value="$PROJECT_DIR$/src/User.java" />
-        <option value="$PROJECT_DIR$/src/ReadUserExcel.java" />
-        <option value="$PROJECT_DIR$/src/Login.java" />
-        <option value="$PROJECT_DIR$/src/user/Candidates.java" />
-        <option value="$PROJECT_DIR$/src/ReadCandidates.java" />
-        <option value="$PROJECT_DIR$/src/Mission.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/feature/Write.java" />
-        <option value="$PROJECT_DIR$/src/feature/Read.java" />
-        <option value="$PROJECT_DIR$/src/feature2/SpaceShuttle.java" />
-        <option value="$PROJECT_DIR$/src/feature/Mission.java" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="199" />
-    <option name="y" value="73" />
-    <option name="width" value="1217" />
-    <option name="height" value="764" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MTMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTMSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="feature2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTMSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTMSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="feature3" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1ctIRxUp1KxAt7HVOQCnN8TavSW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -251,18 +80,6 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="UserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -299,11 +116,9 @@
       <workItem from="1590489089468" duration="933000" />
       <workItem from="1590900662960" duration="96000" />
       <workItem from="1591167667678" duration="11853000" />
+      <workItem from="1591341460595" duration="3119000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,238 +129,37 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="199" y="73" width="1217" height="764" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4855876" visible="true" weight="0.21021277" />
-      <window_info id="Structure" order="1" sideWeight="0.5144124" side_tool="true" weight="0.22673796" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32886904" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32886904" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39880952" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32986626" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32986626" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32886904" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32941177" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/123.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/MissionCoordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/Candidates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#2904#2905#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Employment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReadUserExcel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReadCandidates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Write.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="96" selection-start-line="38" selection-start-column="96" selection-end-line="38" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Read.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3034">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature2/SpaceShuttle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature3/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature3/Administrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature3/Criteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Mission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="112" column="26" lean-forward="true" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
-          <folding>
-            <element signature="e#22221#22222#0" expanded="true" />
-            <element signature="e#22321#22322#0" expanded="true" />
-            <element signature="e#22421#22422#0" expanded="true" />
-            <element signature="e#22537#22538#0" expanded="true" />
-            <element signature="e#22657#22658#0" expanded="true" />
-            <element signature="e#22773#22774#0" expanded="true" />
-            <element signature="e#22842#22843#0" expanded="true" />
-            <element signature="e#22938#22939#0" expanded="true" />
-            <element signature="e#23070#23071#0" expanded="true" />
-            <element signature="e#23183#23184#0" expanded="true" />
-            <element signature="e#23251#23252#0" expanded="true" />
-            <element signature="e#23375#23376#0" expanded="true" />
-            <element signature="e#23483#23484#0" expanded="true" />
-            <element signature="e#23549#23550#0" expanded="true" />
-            <element signature="e#23621#23622#0" expanded="true" />
-            <element signature="e#23693#23694#0" expanded="true" />
-            <element signature="e#23773#23774#0" expanded="true" />
-            <element signature="e#23855#23856#0" expanded="true" />
-            <element signature="e#23935#23936#0" expanded="true" />
-            <element signature="e#23991#23992#0" expanded="true" />
-            <element signature="e#24061#24062#0" expanded="true" />
-            <element signature="e#24149#24150#0" expanded="true" />
-            <element signature="e#24226#24227#0" expanded="true" />
-            <element signature="e#24302#24303#0" expanded="true" />
-            <element signature="e#24358#24359#0" expanded="true" />
-            <element signature="e#24442#24443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1591344592989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591344592989" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1591344592989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591344592989" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1591344592989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591344592989" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1591344592989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591344592989" />
   </component>
   <component name="masterDetails">
     <states>

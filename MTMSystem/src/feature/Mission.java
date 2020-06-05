@@ -109,7 +109,7 @@ public class Mission
             }
             if (selection == 3)
             {
-                Administrator ad = new Administrator();
+                Administrator ad = new Administrator(missionID, description);
                 ad.star();
             }
         }
