@@ -210,6 +210,6 @@ public class Candidates extends User {
     public int getAge(){
         int a = 0;
         a = Integer.parseInt(dateOfBirth.substring(dateOfBirth.length()-4));
-        return a;
+        return 2020-a;
     }
 }

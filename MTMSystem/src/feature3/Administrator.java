@@ -261,7 +261,7 @@ public class Administrator {
     public ArrayList<Candidates> searchFunction() throws IOException {
         ReadCandidates r = new ReadCandidates();
         List<Candidates> list = new ArrayList<>();
-        list = r.read("C://Users/wang8/Desktop/5136/FIT5136_S1_2020_03/MTMSystem/Candidate.xlsx");
+        list = r.read("/Users/wang8/Documents/Candidate.xlsx");
 
         ArrayList<Candidates> candidatesList = new ArrayList<Candidates>();
         int jobNumber = jobs.size();
@@ -282,7 +282,6 @@ public class Administrator {
 
                 if (jobCriteria.get(a).getAttributeName() == "maxAge") {
                     selectedMax = jobCriteria.get(a).getAttributeDetail();
-
                 }
 
                 if (jobCriteria.get(a).getAttributeName() == "work experience") {
@@ -300,10 +299,10 @@ public class Administrator {
                 while (c < list.size()) {
                     if (list.get(c).getAge() <= Integer.parseInt(selectedMax) &&
                             list.get(c).getAge() >= Integer.parseInt(selectedMin) &&
-                            Integer.parseInt(list.get(c).getWorkExperience()) <= Integer.parseInt(selectedExp) &&
-                            list.get(c).getWorkExperience() == selectedLanguage &&
-                            list.get(c).getHealthRecord() == "none" &&
-                            jobSelected.getJobName() == list.get(c).getOccupations()
+                            Integer.parseInt(list.get(c).getWorkExperience()) >= Integer.parseInt(selectedExp) &&
+                            list.get(c).getLanguagesSpoken().equals(selectedLanguage) &&
+                            list.get(c).getHealthRecord().equals("none") &&
+                            jobSelected.getJobName().equals(list.get(c).getOccupations())
                     ) {
                         candidatesList.add(list.get(c));
                         c++;
@@ -325,13 +324,14 @@ public class Administrator {
         System.out.println("Candidates has been selected:");
         while (i < candidatesList.size()) {
             System.out.println("Candidate ID: " + candidatesList.get(i).getCandidateId()
-                    + "Candidate Name: " + candidatesList.get(i).getName()
-                    +"Date of birth: "+ candidatesList.get(i).getDateOfBirth()
-                    +"Gender "+ candidatesList.get(i).getGender()
-                    +"Work experience: "+ candidatesList.get(i).getWorkExperience()
-                    +"Occupations: "+ candidatesList.get(i).getOccupations()
-                    +"Languages Spoken: "+ candidatesList.get(i).getLanguagesSpoken()
-                    +"Health Record: "+ candidatesList.get(i).getHealthRecord());
+                    + "  Candidate Name: " + candidatesList.get(i).getName()
+                    +"  Date of birth: "+ candidatesList.get(i).getDateOfBirth()
+                    +"  Gender "+ candidatesList.get(i).getGender()
+                    +"  Work experience: "+ candidatesList.get(i).getWorkExperience()
+                    +"  Occupations: "+ candidatesList.get(i).getOccupations()
+                    +"  Languages Spoken: "+ candidatesList.get(i).getLanguagesSpoken()
+                    +"  Health Record: "+ candidatesList.get(i).getHealthRecord());
+            i++;
         }
     }
 

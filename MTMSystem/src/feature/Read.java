@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class Read
 {
-    private  String fileName = "/Users/brianzhang/MTMSystem/src/feature/Mission2.xlsx";
+    private  String fileName = "/Users/wang8/Desktop/5136/FIT5136_S1_2020_03/MTMSystem/src/feature/Mission2.xlsx";
     public void a (){
         System.out.print('\u000C');}
     public List<Mission> read() throws EncryptedDocumentException, IOException

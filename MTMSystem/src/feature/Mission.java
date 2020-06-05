@@ -107,7 +107,7 @@ public class Mission
             }
             if (selection == 3)
             {
-                Administrator ad = new Administrator();
+                Administrator ad = new Administrator(list.get(n).getMissionID() ,list.get(n).getDescription());
                 ad.star();
             }
         }
