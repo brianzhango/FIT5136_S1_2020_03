@@ -1,6 +1,8 @@
 package user;
 
+
 public class Candidates extends User {
+    private String candidateId;
     private String name;
     private String dateOfBirth;
     private String address;
@@ -13,10 +15,30 @@ public class Candidates extends User {
     private String occupations;
     private String computerSkills;
     private String languagesSpoken;
-    private int candidateId;
+    private String healthRecord;
+
 
     public Candidates(){
+        super();
 
+    }
+
+    public Candidates(String candidateId, String name, String dateOfBirth, String address, String identificationNumber, String gender, String allergies, String foodPreferences, String qualifications, String workExperience, String occupations, String computerSkills, String languagesSpoken, String healthRecord) {
+        super();
+        this.candidateId = candidateId;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.identificationNumber = identificationNumber;
+        this.gender = gender;
+        this.allergies = allergies;
+        this.foodPreferences = foodPreferences;
+        this.qualifications = qualifications;
+        this.workExperience = workExperience;
+        this.occupations = occupations;
+        this.computerSkills = computerSkills;
+        this.languagesSpoken = languagesSpoken;
+        this.healthRecord = healthRecord;
     }
 
     public String getName() {
@@ -91,7 +113,11 @@ public class Candidates extends User {
 
     }
 
-    public int getCandidateId() {
+    public String getHealthRecord() {
+        return healthRecord;
+    }
+
+    public String getCandidateId() {
 
         return candidateId;
 
@@ -169,7 +195,11 @@ public class Candidates extends User {
 
     }
 
-    public void setCandidateId(int candidateId) {
+    public void setHealthRecord(String healthRecord) {
+        this.healthRecord = healthRecord;
+    }
+
+    public void setCandidateId(String candidateId) {
 
         this.candidateId = candidateId;
 
