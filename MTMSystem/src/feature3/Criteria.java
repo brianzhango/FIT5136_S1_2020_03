@@ -1,5 +1,3 @@
-package feature3;
-
 public class Criteria {
 
     private String attributeName;

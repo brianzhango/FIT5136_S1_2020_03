@@ -1,5 +1,3 @@
-package feature3;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -8,14 +6,14 @@ public class Administrator {
     private String administratorName;
     private ArrayList<Job> jobs;
 
-    public Administrator()
+    public void Administrator()
     {
         administratorId = 0;
         administratorName = "Justin";
         jobs = new ArrayList<Job>();
     }
 
-    public Administrator(int id, String name)
+    public void Administrator(int id, String name)
     {
         administratorId = id;
         administratorName = name;
@@ -94,13 +92,10 @@ public class Administrator {
                     int a = 0;
                     while (a < jobCriteria.size())
                     {
-                        if (jobCriteria.get(a).getAttributeName() == "minimumAge")
+                        if (jobCriteria.get(a).getAttributeName() == "age")
                         {
                             jobSelected.removeCriteria(a);
-                        }
-                        if (jobCriteria.get(a).getAttributeName() == "maxAge")
-                        {
-                            jobSelected.removeCriteria(a);
+                            break;
                         }
                         a++;
                     }
@@ -159,8 +154,8 @@ public class Administrator {
     public void languagemenu()
     {
         System.out.println("Welcome to Mission to Mars system!");
-        System.out.println("This is mission " + administratorId);
-        System.out.println("Mission Description：" + administratorName );
+        System.out.println("This is mission 4404");
+        //System.out.println("Mission Description：");
         System.out.println("Please start creating selection criteria");
         System.out.println("Please select the Languages Requirement for all");
         System.out.println("1. English");
@@ -216,8 +211,7 @@ public class Administrator {
     public void menu(int jobNumber)
     {
         Job jobSelected = jobs.get(jobNumber);
-        String selectedMin = "";
-        String selectedMax = "";
+        String selectedAge = "";
         String selectedExp = "";
         int priorityAge = 0;
         int priorityExp = 0;
@@ -225,16 +219,10 @@ public class Administrator {
         ArrayList<Criteria> jobCriteria =jobSelected.getList();
         while (a < jobCriteria.size())
         {
-            if (jobCriteria.get(a).getAttributeName() == "minimumAge")
+            if (jobCriteria.get(a).getAttributeName() == "age")
             {
-                selectedMin = jobCriteria.get(a).getAttributeDetail();
+                selectedAge = jobCriteria.get(a).getAttributeDetail();
                 priorityAge = jobCriteria.get(a).getPriority();
-
-            }
-
-            if (jobCriteria.get(a).getAttributeName() == "maxAge")
-            {
-                selectedMax = jobCriteria.get(a).getAttributeDetail();
 
             }
 
@@ -246,11 +234,10 @@ public class Administrator {
             a++;
         }
         System.out.println("Please add criteria for the job: " + jobSelected.getJobName() + "You can remove the criteria by input d1 or d2");
-        System.out.println("1. A range of age (18 - 55) : " + selectedMin +"-"+ selectedMax+" Priority: " + priorityAge);
-        System.out.println("2. Years of work experience : " + selectedExp +" Priority: " + priorityExp) ;
+        System.out.println("1. A range of age (18 - 55) :" + selectedAge +" Priority: " + priorityAge);
+        System.out.println("2. Years of work experience :" + selectedExp +" Priority: " + priorityExp) ;
         System.out.println("0. Return");
     }
-
 
 
 }
