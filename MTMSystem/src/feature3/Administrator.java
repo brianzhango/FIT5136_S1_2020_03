@@ -1,19 +1,25 @@
-import java.util.Scanner;
-import java.util.ArrayList;
+package feature3;
+
+
+import java.io.*;
+import java.util.*;
+import org.apache.poi.*;
+import org.apache.poi.ss.usermodel.*;
+import java.io.IOException;
 
 public class Administrator {
     private int administratorId;
     private String administratorName;
     private ArrayList<Job> jobs;
 
-    public void Administrator()
+    public Administrator()
     {
         administratorId = 0;
         administratorName = "Justin";
         jobs = new ArrayList<Job>();
     }
 
-    public void Administrator(int id, String name)
+    public Administrator(int id, String name)
     {
         administratorId = id;
         administratorName = name;
@@ -40,7 +46,7 @@ public class Administrator {
         administratorName = name;
     }
 
-    public void star() {
+    public void star() throws IOException{
         jobs = new ArrayList<Job>();
         String languageAll = language();
         //Need to be fix in the future
@@ -67,6 +73,7 @@ public class Administrator {
             }
         }
         System.out.println("Add criteria has been down.");
+        searchPrinter();
     }
 
     public void addCriteria(int jobNumber)
@@ -92,10 +99,13 @@ public class Administrator {
                     int a = 0;
                     while (a < jobCriteria.size())
                     {
-                        if (jobCriteria.get(a).getAttributeName() == "age")
+                        if (jobCriteria.get(a).getAttributeName() == "minimumAge")
                         {
                             jobSelected.removeCriteria(a);
-                            break;
+                        }
+                        if (jobCriteria.get(a).getAttributeName() == "maxAge")
+                        {
+                            jobSelected.removeCriteria(a);
                         }
                         a++;
                     }
@@ -154,8 +164,8 @@ public class Administrator {
     public void languagemenu()
     {
         System.out.println("Welcome to Mission to Mars system!");
-        System.out.println("This is mission 4404");
-        //System.out.println("Mission Description：");
+        System.out.println("This is mission " + administratorId);
+        System.out.println("Mission Description：" + administratorName );
         System.out.println("Please start creating selection criteria");
         System.out.println("Please select the Languages Requirement for all");
         System.out.println("1. English");
@@ -211,7 +221,8 @@ public class Administrator {
     public void menu(int jobNumber)
     {
         Job jobSelected = jobs.get(jobNumber);
-        String selectedAge = "";
+        String selectedMin = "";
+        String selectedMax = "";
         String selectedExp = "";
         int priorityAge = 0;
         int priorityExp = 0;
@@ -219,10 +230,16 @@ public class Administrator {
         ArrayList<Criteria> jobCriteria =jobSelected.getList();
         while (a < jobCriteria.size())
         {
-            if (jobCriteria.get(a).getAttributeName() == "age")
+            if (jobCriteria.get(a).getAttributeName() == "minimumAge")
             {
-                selectedAge = jobCriteria.get(a).getAttributeDetail();
+                selectedMin = jobCriteria.get(a).getAttributeDetail();
                 priorityAge = jobCriteria.get(a).getPriority();
+
+            }
+
+            if (jobCriteria.get(a).getAttributeName() == "maxAge")
+            {
+                selectedMax = jobCriteria.get(a).getAttributeDetail();
 
             }
 
@@ -234,10 +251,88 @@ public class Administrator {
             a++;
         }
         System.out.println("Please add criteria for the job: " + jobSelected.getJobName() + "You can remove the criteria by input d1 or d2");
-        System.out.println("1. A range of age (18 - 55) :" + selectedAge +" Priority: " + priorityAge);
-        System.out.println("2. Years of work experience :" + selectedExp +" Priority: " + priorityExp) ;
+        System.out.println("1. A range of age (18 - 55) : " + selectedMin +"-"+ selectedMax+" Priority: " + priorityAge);
+        System.out.println("2. Years of work experience : " + selectedExp +" Priority: " + priorityExp) ;
         System.out.println("0. Return");
     }
 
+
+
+    public ArrayList<Candidates> searchFunction() throws IOException {
+        ReadCandidates r = new ReadCandidates();
+        List<Candidates> list = new ArrayList<>();
+        list = r.read("C://Users/wang8/Desktop/5136/FIT5136_S1_2020_03/MTMSystem/Candidate.xlsx");
+
+        ArrayList<Candidates> candidatesList = new ArrayList<Candidates>();
+        int jobNumber = jobs.size();
+        int candidatesNumber = 0;
+        String selectedMin ="";
+        String selectedMax ="";
+        String selectedExp ="";
+        String selectedLanguage = "";
+        while (candidatesNumber < jobNumber) {
+            Job jobSelected = jobs.get(candidatesNumber);
+            ArrayList<Criteria> jobCriteria = jobSelected.getList();
+            int a = 0;
+            while (a < jobCriteria.size()) {
+                if (jobCriteria.get(a).getAttributeName() == "minimumAge") {
+                    selectedMin = jobCriteria.get(a).getAttributeDetail();
+
+                }
+
+                if (jobCriteria.get(a).getAttributeName() == "maxAge") {
+                    selectedMax = jobCriteria.get(a).getAttributeDetail();
+
+                }
+
+                if (jobCriteria.get(a).getAttributeName() == "work experience") {
+                    selectedExp = jobCriteria.get(a).getAttributeDetail();
+                }
+                if (jobCriteria.get(a).getAttributeName() == "language") {
+                    selectedLanguage = jobCriteria.get(a).getAttributeDetail();
+                }
+                a++;
+            }
+            int i = 0;
+            int c = 0;
+            while (i < 3) {
+
+                while (c < list.size()) {
+                    if (list.get(c).getAge() <= Integer.parseInt(selectedMax) &&
+                            list.get(c).getAge() >= Integer.parseInt(selectedMin) &&
+                            Integer.parseInt(list.get(c).getWorkExperience()) <= Integer.parseInt(selectedExp) &&
+                            list.get(c).getWorkExperience() == selectedLanguage &&
+                            list.get(c).getHealthRecord() == "none" &&
+                            jobSelected.getJobName() == list.get(c).getOccupations()
+                    ) {
+                        candidatesList.add(list.get(c));
+                        c++;
+                        i++;
+                        break;
+                    }
+                    c++;
+                }
+            }
+            candidatesNumber++;
+        }
+        return candidatesList;
+    }
+
+    public void searchPrinter() throws IOException
+    {
+        ArrayList<Candidates> candidatesList = searchFunction();
+        int i = 0;
+        System.out.println("Candidates has been selected:");
+        while (i < candidatesList.size()) {
+            System.out.println("Candidate ID: " + candidatesList.get(i).getCandidateId()
+                    + "Candidate Name: " + candidatesList.get(i).getName()
+                    +"Date of birth: "+ candidatesList.get(i).getDateOfBirth()
+                    +"Gender "+ candidatesList.get(i).getGender()
+                    +"Work experience: "+ candidatesList.get(i).getWorkExperience()
+                    +"Occupations: "+ candidatesList.get(i).getOccupations()
+                    +"Languages Spoken: "+ candidatesList.get(i).getLanguagesSpoken()
+                    +"Health Record: "+ candidatesList.get(i).getHealthRecord());
+        }
+    }
 
 }

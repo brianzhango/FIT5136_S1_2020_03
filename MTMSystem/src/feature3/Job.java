@@ -1,3 +1,5 @@
+package feature3;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -41,18 +43,57 @@ public class Job {
 
     public void age()
     {
-        String attributeName = "age";
-        String attributeDetail = "";
-        duplication(attributeName);
+        String attributeName1 = "minimumAge";
+        String attributeName2 = "maxAge";
+        String attributeDetail1 = "";
+        String attributeDetail2 = "";
+        duplication(attributeName1);
+        duplication(attributeName2);
         int priority = maxPriority() + 1;
         System.out.println("Range of age has been selected.");
-        System.out.println("Please input the range you want:(The range should be older than 18 and younger than 55");
+        int i = 0;
         Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        System.out.println("A range of age"+ s + "has been selected");
-        attributeDetail = s;
-        Criteria c = new Criteria(attributeName, attributeDetail, priority);
-        criterias.add(c);
+        int min = 0;
+        int max = 0;
+        while (i == 0){
+            System.out.println("Please input the minimum age: (Must be older than 18:)");
+            min = scanner.nextInt();
+            if (min < 19){
+                System.out.println("The minimum age must be older than 18");
+            }
+            if (min > 64){
+                System.out.println("The max age must be younger than 65");
+            }
+            if(min >= 19){
+                System.out.println("Minimum age "+ min + "has been selected");
+                attributeDetail1 = min + "";
+                Criteria c = new Criteria(attributeName1, attributeDetail1, priority);
+                criterias.add(c);
+                i++;
+            }
+        }
+        int b = 0;
+        while (b == 0){
+            System.out.println("Please input the max age: (Must be younger than 65:)");
+            max = scanner.nextInt();
+            if (max > 64){
+                System.out.println("The max age must be younger than 65");
+            }
+            if (max < 19){
+                System.out.println("The minimum age must be older than 18");
+            }
+            if (max < min){
+                System.out.println("The maximum number cannot be smaller than minimum number ");
+            }
+            if( min <= max && max <= 64){
+                System.out.println("Max age "+ max + "has been selected");
+                attributeDetail2 = max + "";
+                Criteria d = new Criteria(attributeName2, attributeDetail2, priority);
+                criterias.add(d);
+                b++;
+            }
+        }
+
     }
 
     public void workexperience()

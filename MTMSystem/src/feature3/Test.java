@@ -1,8 +1,11 @@
+package feature3;
+
+import java.io.IOException;
+
 public class Test {
 
-    public static void main(String[] args)
-    {
-        Administrator administrator1 = new Administrator();
+    public static void main(String[] args) throws IOException {
+        feature3.Administrator administrator1 = new feature3.Administrator();
         administrator1.star();
     }
 
