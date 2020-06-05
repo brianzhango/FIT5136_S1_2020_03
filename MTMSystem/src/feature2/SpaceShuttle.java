@@ -1,6 +1,9 @@
 package feature2;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import feature.Mission;
 
 public class SpaceShuttle {
     private int spaceId;
@@ -14,9 +17,11 @@ public class SpaceShuttle {
 
     private String selectedShuttle11 = "";
 
+
+
     public SpaceShuttle() {
       }
-    public void selectShuttle(){
+    public void selectShuttle() throws IOException {
         boolean flag = true;
         while (flag){
             displayMenu();
@@ -26,30 +31,43 @@ public class SpaceShuttle {
         }
     }
     public void displayMenu(){
+        MTMSystem.listOfSpaceShuttle = new ArrayList<>();
+        MTMSystem.listOfSpaceShuttle.add("1. magna. Sed");
+        MTMSystem.listOfSpaceShuttle.add("2. dapibus gravida.");
+        MTMSystem.listOfSpaceShuttle.add("3. tristique neque");
+        MTMSystem.listOfSpaceShuttle.add("4. magna a");
+        MTMSystem.listOfSpaceShuttle.add("5. accumsan convallis,");
+        MTMSystem.listOfSpaceShuttle.add("6. non, egestas");
+        MTMSystem.listOfSpaceShuttle.add("7. eros. Nam");
+        MTMSystem.listOfSpaceShuttle.add("8. dui augue");
+        MTMSystem.listOfSpaceShuttle.add("9. tellus faucibus");
+        MTMSystem.listOfSpaceShuttle.add("10. gravida sagittis.");
+        MTMSystem.listOfSpaceShuttle.add("11. nunc interdum");
+        MTMSystem.listOfSpaceShuttle.add("12. lacus, varius");
         System.out.println("Welcome to Mission to Mars system!");
         System.out.println("Please start selecting a space shuttle.");
         System.out.println(" ");
         System.out.println("Please select from following shuttles:");
-        System.out.println("1. magna. Sed" + status[0]);
-        System.out.println("2. dapibus gravida." + status[1]);
-        System.out.println("3. tristique neque" + status[2]);
-        System.out.println("4. magna a" + status[3]);
-        System.out.println("5. accumsan convallis," + status[4]);
-        System.out.println("6. non, egestas" +  status[5]);
-        System.out.println("7. eros. Nam" + status[6]);
-        System.out.println("8. dui augue" + status[7]);
-        System.out.println("9. tellus faucibus" + status[8]);
-        System.out.println("10. gravida sagittis." + status[9]);
-        System.out.println("11. nunc interdum" + status[10]);
-        System.out.println("12. lacus, varius" + status[11]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(0) + MTMSystem.sStatus[0]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(1) + MTMSystem.sStatus[1]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(2) + MTMSystem.sStatus[2]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(3) + MTMSystem.sStatus[3]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(4) + MTMSystem.sStatus[4]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(5) +  MTMSystem.sStatus[5]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(6) + MTMSystem.sStatus[6]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(7) + MTMSystem.sStatus[7]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(8) + MTMSystem.sStatus[8]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(9) + MTMSystem.sStatus[9]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(10) + MTMSystem.sStatus[10]);
+        System.out.println(MTMSystem.listOfSpaceShuttle.get(11) + MTMSystem.sStatus[11]);
 
     }
 
 
-    public boolean optionManager(String option){
+    public boolean optionManager(String option) throws IOException {
         switch (option){
             case "1":{
-                if (status[0].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[0].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -68,11 +86,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "magna. Sed";
                     int i = 1;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "2":{
-                if (status[1].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[1].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -91,11 +109,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "dapibus gravida.";
                     int i = 2;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "3":{
-                if (status[2].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[2].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -114,11 +132,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "tristique neque";
                     int i = 3;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "4":{
-                if (status[3].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[3].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -137,11 +155,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "magna a";
                     int i = 4;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "5":{
-                if (status[4].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[4].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -160,11 +178,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "accumsan convallis,";
                     int i = 5;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "6":{
-                if (status[5].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[5].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -183,11 +201,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "non, egestas";
                     int i = 6;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "7":{
-                if (status[6].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[6].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -206,11 +224,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "eros. Nam";
                     int i = 7;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "8":{
-                if (status[7].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[7].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -229,11 +247,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "dui augue";
                     int i = 8;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "9":{
-                if (status[8].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[8].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -252,11 +270,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "tellus faucibus";
                     int i = 9;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "10":{
-                if (status[9].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[9].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -275,11 +293,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "gravida sagittis.";
                     int i = 10;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "11":{
-                if (status[10].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[10].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -298,11 +316,11 @@ public class SpaceShuttle {
                     selectedShuttle11 = "nunc interdum";
                     int i = 11;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
             case "12":{
-                if (status[11].equals(" (Occupied)")){
+                if (MTMSystem.sStatus[11].equals(" (Occupied)")){
                     System.out.println("Sorry, this shuttle has been occupied by another mission.");
                     System.out.println("Please select another shuttle \n" + "----------------------------------------");
                     return true;
@@ -321,27 +339,36 @@ public class SpaceShuttle {
                     selectedShuttle11 = "lacus, varius";
                     int i = 12;
                     confirmPage(i);
-                    return true;
+                    return false;
                 }
             }
+            case "0":{
+                Mission mission = new Mission();
+                mission.startMission();
+            }
             default:{
-                return false;
+                return true;
             }
         }
 
     }
-    public void confirmPage(int i){
+    public void confirmPage(int i) throws IOException {
         String option1 = stringInput("Are you sure? \n" + "1. Confirm your choice \n" + "0. Cancel and go back to previous menu");
         if (option1.equals("1")){
             String selectedShuttle = selectedShuttle11;
+            //MTMSystem.listOfSpaceShuttle.get(MTMSystem.listOfSpaceShuttle.indexOf(selectedShuttle)).replace("");
             System.out.println("Your choice is " + selectedShuttle11 + ".");
             System.out.println("Confirmed.");
             System.out.println(" ");
             System.out.println("--------------------------------------");
-            status[i-1] = " (Occupied)";
+            MTMSystem.sStatus[i-1] = " (Occupied)";
+            Mission mission = new Mission();
+            mission.startMission();
 
         }
         else if (option1.equals("0")){
+            Mission mission = new Mission();
+            mission.startMission();
 
         }
     }

@@ -15,7 +15,7 @@ public class UserTest{
         Login lg = new Login();
         Mission mission = new Mission();
 
-        System.out.println("Welcome to feature.Mission to Mars system!");
+        System.out.println("Welcome to Mission to Mars System!");
         System.out.println("Please log in!");
         list = efile.read("/Users/brianzhang/MTMSystem/src/Username.xlsx");
         //System.out.println(list.toString());
