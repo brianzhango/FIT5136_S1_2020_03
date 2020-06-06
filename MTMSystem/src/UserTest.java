@@ -17,7 +17,7 @@ public class UserTest{
 
         System.out.println("Welcome to Mission to Mars System!");
         System.out.println("Please log in!");
-        list = efile.read("/Users/brianzhang/MTMSystem/src/Username.xlsx");
+        list = efile.read("/Users/wang8/Desktop/5136/FIT5136_S1_2020_03/MTMSystem/src/Username.xlsx");
         //System.out.println(list.toString());
 
         while(true) {

@@ -27,7 +27,6 @@ public class SpaceShuttle {
             displayMenu();
             String userOption = stringInput("");
             flag = optionManager(userOption);
-
         }
     }
     public void displayMenu(){
@@ -362,8 +361,6 @@ public class SpaceShuttle {
             System.out.println(" ");
             System.out.println("--------------------------------------");
             MTMSystem.sStatus[i-1] = " (Occupied)";
-            Mission mission = new Mission();
-            mission.startMission();
 
         }
         else if (option1.equals("0")){

@@ -91,33 +91,38 @@ public class Mission
             int selection = 0;
             int[] k = new int[2];
             n = handleSelect(list, display, n, joblist, changeNumber);
-            k = Userselect(list, display, n, joblist, changeNumber);
-            n = k[0];
-            selection = k[1];
-            if (selection == 1)
+            boolean exit = false;
+            for(;!exit;)
             {
-                n-=1;
-                handleChange(list,display,n,joblist,changeNumber);
+                k = Userselect(list, display, n, joblist, changeNumber);
+                selection = k[1];
+                n = k[0];
+                switch (selection) {
+                    case 1:
+                        n -= 1;
+                        handleChange(list, display, n, joblist, changeNumber);
+                        n +=1;
+                        break;
 
+                    case 2:
+                        SpaceShuttle shuttle = new SpaceShuttle();
+                        shuttle.selectShuttle();
+                        break;
+
+                    case 3:
+                        n -= 1;
+                        setMission(list, n);
+                        Administrator ad = new Administrator(list.get(n).getMissionID(), list.get(n).getDescription(), getJobNameList(n));
+                        ad.star();
+                        n +=1;
+                        break;
+                    }
+                }
             }
-            if (selection == 2)
-            {
-                SpaceShuttle shuttle = new SpaceShuttle();
-                shuttle.selectShuttle();
-            }
-            if (selection == 3)
-            {
-                n-=1;
-                setMission(list, n);
-                Administrator ad = new Administrator(list.get(n).getMissionID() ,list.get(n).getDescription(), getJobNameList(n));
-                ad.star();
-            }
-        }
+    }
 //        if (i == 0) {
 //
 //        }
-    }
-
     public void handleCreat(List<Mission> list,Display display, int length,List<Job> joblist,int changeNumber) throws EncryptedDocumentException, IOException
     {
         inputID(list,display);
@@ -350,6 +355,7 @@ public class Mission
         }
         setCCI(CCI);
     }
+
 
     public void inputJob (List<Mission> list,List<Job> joblist,int location, int p,int changeNumber) throws IOException {
         Display display = new Display();

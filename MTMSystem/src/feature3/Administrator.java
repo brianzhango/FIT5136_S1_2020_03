@@ -264,7 +264,7 @@ public class Administrator {
     public ArrayList<Candidates> searchFunction() throws IOException {
         ReadCandidates r = new ReadCandidates();
         List<Candidates> list = new ArrayList<>();
-        list = r.read("/Users/brianzhang/MTMSystem/src/Candidate.xlsx");
+        list = r.read("/Users/wang8/Desktop/5136/FIT5136_S1_2020_03/MTMSystem/src/Candidate.xlsx");
 
         ArrayList<Candidates> candidatesList = new ArrayList<Candidates>();
         int jobNumber = jobs.size();
