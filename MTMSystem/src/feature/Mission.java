@@ -113,7 +113,9 @@ public class Mission
                 ad.star();
             }
         }
-
+//        if (i == 0) {
+//
+//        }
     }
 
     public void handleCreat(List<Mission> list,Display display, int length,List<Job> joblist,int changeNumber) throws EncryptedDocumentException, IOException
@@ -810,11 +812,13 @@ public class Mission
         jobList = getJob();
         String[] A = jobList.split("\n");
         String[] B = new String[100];
+        String[] C = new String[100];
         ArrayList<String[]> JobNameList = new ArrayList<String[]>();
         int k = 0;
+        int y = 0;
         for(int i = 0; i<A.length;i++)
         {
-            //int y = 0;
+
             if(A[i].contains("employ title :"))
             {
                 B[k] = A[i].replace("employ title :","");
@@ -822,11 +826,12 @@ public class Mission
             }
             if(A[i].contains("number required: "))
             {
-                B[k] = A[i].replace("number required: ","");;
-                k++;
+                C[y] = A[i].replace("number required: ","");;
+                y++;
             }
         }
         JobNameList.add(B);
+        JobNameList.add(C);
         return JobNameList;
     }
 

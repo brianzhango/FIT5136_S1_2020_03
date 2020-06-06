@@ -54,13 +54,14 @@ public class Administrator {
         jobs = new ArrayList<Job>();
         String languageAll = language();
         int jobNumbers = 0;
-        if (jobNumbers < jobnames.size()/2){
-            Job newJob = new Job(jobnames.get(0)[jobNumbers*2]);
-            jobs.add(newJob);
-            jobs.get(jobNumbers).addCriteria("NumberRequired",jobnames.get(0)[jobNumbers*2+1], 0);
-            jobs.get(jobNumbers).addCriteria("language",languageAll, 0);
-            jobs.get(jobNumbers).addCriteria("health record","none", 0);
-            jobNumbers++;
+        for (;jobNumbers < jobnames.get(0).length;jobNumbers++){
+            if (jobnames.get(0)[jobNumbers]!= null ) {
+                Job newJob = new Job(jobnames.get(0)[jobNumbers]);
+                jobs.add(newJob);
+                jobs.get(jobNumbers).addCriteria("NumberRequired", jobnames.get(1)[jobNumbers], 0);
+                jobs.get(jobNumbers).addCriteria("language", languageAll, 0);
+                jobs.get(jobNumbers).addCriteria("health record", "none", 0);
+            }
         }
         int a = 0;
         while (a == 0) {
@@ -68,7 +69,7 @@ public class Administrator {
             int userInput = jobSelection();
             addCriteria(userInput - 1);
             Scanner scanner = new Scanner(System.in);
-            System.out.println("pressure 1 if you want to edit an other job, input any other number will exit.");
+            System.out.println("input 1 to edit another job, input any other number will exit.");
             int s = scanner.nextInt();
             if (s == 1){
                 a = 0;
@@ -268,14 +269,16 @@ public class Administrator {
         ArrayList<Candidates> candidatesList = new ArrayList<Candidates>();
         int jobNumber = jobs.size();
         int candidatesNumber = 0;
-        String selectedMin ="";
-        String selectedMax ="";
-        String selectedExp ="";
-        String selectedLanguage = "";
+
         while (candidatesNumber < jobNumber) {
             Job jobSelected = jobs.get(candidatesNumber);
             ArrayList<Criteria> jobCriteria = jobSelected.getList();
             int a = 0;
+            String selectedMin ="";
+            String selectedMax ="";
+            String selectedExp ="";
+            String selectedLanguage = "";
+            String selectedNumber = "";
             while (a < jobCriteria.size()) {
                 if (jobCriteria.get(a).getAttributeName() == "minimumAge") {
                     selectedMin = jobCriteria.get(a).getAttributeDetail();
@@ -292,11 +295,14 @@ public class Administrator {
                 if (jobCriteria.get(a).getAttributeName() == "language") {
                     selectedLanguage = jobCriteria.get(a).getAttributeDetail();
                 }
+                if (jobCriteria.get(a).getAttributeName() == "NumberRequired") {
+                    selectedNumber = jobCriteria.get(a).getAttributeDetail();
+                }
                 a++;
             }
             int i = 0;
             int c = 0;
-            while (i < 3) {
+            while (i < Integer.parseInt(selectedNumber)) {
 
                 while (c < list.size()) {
                     if (list.get(c).getAge() <= Integer.parseInt(selectedMax) &&
