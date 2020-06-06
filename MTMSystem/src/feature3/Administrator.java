@@ -6,11 +6,13 @@ import java.util.*;
 import org.apache.poi.*;
 import org.apache.poi.ss.usermodel.*;
 import java.io.IOException;
+import user.Candidates;
 
 public class Administrator {
     private int administratorId;
     private String administratorName;
     private ArrayList<Job> jobs;
+    private ArrayList<String[]> jobnames;
 
     public Administrator()
     {
@@ -19,11 +21,13 @@ public class Administrator {
         jobs = new ArrayList<Job>();
     }
 
-    public Administrator(int id, String name)
+    public Administrator(int id, String name, ArrayList<String[]> namelist)
     {
         administratorId = id;
         administratorName = name;
         jobs = new ArrayList<Job>();
+        jobnames = new ArrayList<String[]>();
+        jobnames = namelist;
     }
 
     public int getAdminstratorId()
@@ -49,16 +53,14 @@ public class Administrator {
     public void star() throws IOException{
         jobs = new ArrayList<Job>();
         String languageAll = language();
-        //Need to be fix in the future
-        Job job1 = new Job("Teacher");
-        jobs.add(job1);
-        Job job2 = new Job("Doctor");
-        jobs.add(job2);
-        int i = 0;
-        while (i < jobs.size()) {
-            jobs.get(i).addCriteria("language",languageAll, 0);
-            jobs.get(i).addCriteria("health record","none", 0);
-            i++;
+        int jobNumbers = 0;
+        if (jobNumbers < jobnames.size()/2){
+            Job newJob = new Job(jobnames.get(0)[jobNumbers*2]);
+            jobs.add(newJob);
+            jobs.get(jobNumbers).addCriteria("NumberRequired",jobnames.get(0)[jobNumbers*2+1], 0);
+            jobs.get(jobNumbers).addCriteria("language",languageAll, 0);
+            jobs.get(jobNumbers).addCriteria("health record","none", 0);
+            jobNumbers++;
         }
         int a = 0;
         while (a == 0) {
@@ -261,7 +263,7 @@ public class Administrator {
     public ArrayList<Candidates> searchFunction() throws IOException {
         ReadCandidates r = new ReadCandidates();
         List<Candidates> list = new ArrayList<>();
-        list = r.read("/Users/wang8/Documents/Candidate.xlsx");
+        list = r.read("/Users/brianzhang/MTMSystem/src/Candidate.xlsx");
 
         ArrayList<Candidates> candidatesList = new ArrayList<Candidates>();
         int jobNumber = jobs.size();

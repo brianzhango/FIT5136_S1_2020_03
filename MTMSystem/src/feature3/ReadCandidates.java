@@ -1,12 +1,10 @@
 package feature3;
 
-import org.apache.poi.EncryptedDocumentException;
+import java.io.*;
+import java.util.*;
+import org.apache.poi.*;
 import org.apache.poi.ss.usermodel.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import user.Candidates;
 
 public class ReadCandidates {
     public List<Candidates> read(String fileName) throws EncryptedDocumentException, IOException {
@@ -29,7 +27,7 @@ public class ReadCandidates {
         Sheet sheet = workbook.getSheetAt(0);
 
         int rowNumbers = sheet.getLastRowNum() + 1;
-        // System.out.println(rowNumbers);
+        //System.out.println(rowNumbers);
         Candidates candidate;
         for (int row = 1; row < rowNumbers; row++) {
             Row r = sheet.getRow(row);

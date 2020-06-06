@@ -107,7 +107,9 @@ public class Mission
             }
             if (selection == 3)
             {
-                Administrator ad = new Administrator(list.get(n).getMissionID() ,list.get(n).getDescription());
+                n-=1;
+                setMission(list, n);
+                Administrator ad = new Administrator(list.get(n).getMissionID() ,list.get(n).getDescription(), getJobNameList(n));
                 ad.star();
             }
         }
@@ -156,6 +158,22 @@ public class Mission
         setMissionStatus(list.get(n).getMissionStatus());
         changeNumber = check(display, list, n,2,joblist,changeNumber);
         change(display, changeNumber,list, joblist,n,2,changeNumber);
+    }
+
+    public void setMission(List<Mission> list,int n){
+        setMissionID(list.get(n).getMissionID());
+        setMissionName(list.get(n).getMissionName());
+        setDescription(list.get(n).getDescription());
+        setCountryOfOrigin(list.get(n).getCountryOfOrigin());
+        setCountriesAllowed(list.get(n).getCountriesAllowed());
+        setCoordinatorName(list.get(n).getCoordinatorName());
+        setCCI(list.get(n).getCCI());
+        setJob(list.get(n).getJob());
+        setCargoRequirements(list.get(n).getCargoRequirements());
+        setLaunchDate(list.get(n).getLaunchDate());
+        setDestinationLocation(list.get(n).getDestinationLocation());
+        setMissionDuration(list.get(n).getMissionDuration());
+        setMissionStatus(list.get(n).getMissionStatus());
     }
 
     public int handleSelect(List<Mission> list,Display display,int n,List<Job> joblist,int changeNumber)throws EncryptedDocumentException, IOException
@@ -212,11 +230,23 @@ public class Mission
     public void judgeCS(List<Mission> list,Display display,int n,List<Job> joblist,int changeNumber,String select)throws EncryptedDocumentException, IOException
     {
         int[] z = new int[2];
+        int s = 0;
         if (select.equals("0"))
         {
             z = Userselect(list, display, n, joblist, changeNumber);
             n = z[0] - 1;
-            handleChange(list, display, n, joblist, changeNumber);
+            s = z[1];
+            if (s == 1) {
+                handleChange(list, display, n, joblist, changeNumber);
+            }
+            if (s == 2 ) {
+                SpaceShuttle shuttle = new SpaceShuttle();
+                shuttle.selectShuttle();
+            }
+            if (s == 3 ) {
+                Administrator ad = new Administrator(list.get(n).getMissionID() ,list.get(n).getDescription(), getJobNameList(n));
+                ad.star();
+            }
         }
     }
 
@@ -237,7 +267,7 @@ public class Mission
 
     public void inputName(Display display,List<Mission> list,int location, int p,List<Job> joblist,int changeNumber) throws IOException {
         String name;
-        name = display.acceptStringInput("1.Please input feature.Mission name.");
+        name = display.acceptStringInput("1.Please input Mission name.");
         if(p==1)
         {
             judgeQuit(name);
@@ -414,9 +444,9 @@ public class Mission
         {
             for(int e = 0; e<j.getEmp().size() ; e++)
             {
-                employee += "employ title :"+j.getEmp().get(e).getTitle() + " number required: " + String.valueOf(j.getEmp().get(e).getNumberForEachJob() ) + "\n";
+                employee += "employ title :"+j.getEmp().get(e).getTitle() + "\nnumber required: " + String.valueOf(j.getEmp().get(e).getNumberForEachJob() ) + "\n";
             }
-            jobs += j.getJobName() + ":" + j.getJobDescription() + "\n" + employee + "\n";
+            jobs += "JOB:" + j.getJobName() + "\nJOB Description" + j.getJobDescription() + "\n" + employee + "\n";
         }
         setJob(jobs);
     }
@@ -446,19 +476,19 @@ public class Mission
         }
         else if(R.equals("b"))
         {
-            R = "For this feature.Mission";
+            R = "For this Mission";
         }
         else if(R.equals("c"))
         {
-            R = "For other feature.Mission";
+            R = "For other Mission";
         }
         else if(R.equals("ab"))
         {
-            R = "For job and this feature.Mission";
+            R = "For job and this Mission";
         }
         else if(R.equals("ac"))
         {
-            R = "For job and other feature.Mission";
+            R = "For job and other Mission";
         }
         else if(R.equals("bc"))
         {
@@ -466,7 +496,7 @@ public class Mission
         }
         else if(R.equals("abc"))
         {
-            R = "For job ,this feature.Mission and other Missions";
+            R = "For job ,this Mission and other Missions";
         }
         setCargoRequirements(R);
     }
@@ -540,26 +570,26 @@ public class Mission
 
     public void inputMissionStatus(Display display,List<Mission> list,int location, int p,List<Job> joblist,int changeNumber) throws IOException {
         String S = "";
-        S = display.acceptStringInput("Please select feature.Mission State \n" +
+        S = display.acceptStringInput("Please select Mission State \n" +
                 "a.Planning phase \n" +
                 "b.Departed Earth \n" +
                 "c.Landed on Mars\n" +
-                "d.feature.Mission in progress\n" +
+                "d.Mission in progress\n" +
                 "e. Returned to Earth\n" +
-                "f. feature.Mission completed");
+                "f. Mission completed");
         judgeMC(display, list, location, p, joblist, changeNumber,S);
         while(S.equals("a") == false && S.equals("b") == false &&
                 S.equals("c") == false && S.equals("d") == false &&
                 S.equals("e") == false && S.equals("f") == false)
         {
             display.displayMenu("Please input correct letter");
-            S = display.acceptStringInput("Please select feature.Mission State \n" +
+            S = display.acceptStringInput("Please select Mission State \n" +
                     "a.Planning phase \n" +
                     "b.Departed Earth \n" +
                     "c.Landed on Mars\n" +
-                    "d.feature.Mission in progress\n" +
+                    "d.Mission in progress\n" +
                     "e. Returned to Earth\n" +
-                    "f. feature.Mission completed");
+                    "f. Mission completed");
         }
         if(S.equals("a"))
             setMissionStatus("Planning phase");
@@ -568,11 +598,11 @@ public class Mission
         if(S.equals("c"))
             setMissionStatus("Landed on Marsh");
         if(S.equals("d"))
-            setMissionStatus("feature.Mission in progress");
+            setMissionStatus("Mission in progress");
         if(S.equals("e"))
             setMissionStatus("Returned to Earth");
         if(S.equals("f"))
-            setMissionStatus("feature.Mission completed");
+            setMissionStatus("Mission completed");
     }
 
     public int check(Display display,List<Mission> list,int location, int p,List<Job> joblist,int changeNumber) throws EncryptedDocumentException, IOException
@@ -725,20 +755,79 @@ public class Mission
                     + "1. Change the mission information\n"
                     + "2. Select a space shuttle\n"
                     + "3. Create selection criteria\n"
-                    + "4. Find best candidate\n"
-                    + "5. Register as candidate\n"
+                    + "4. Register as candidate\n"
                     + "0. Exit\n"
                     + "Please input number.");
-            judgeMission(list,display,n,joblist,changeNumber,select);
+            n = judgeMission(list,display,n,joblist,changeNumber,select);
             try{
                 selection = Integer.parseInt(select);
             }catch(NumberFormatException e){
                 System.out.println("please input a correct number!");
             }
-         number[0] = n;
+            number[0] = n;
             number[1] = selection;
         }
         return number;
+    }
+
+    public ArrayList<String[]> getJobList(int n)
+    {
+        String jobList;
+        Read READ = new Read();
+        List<Mission> M = new ArrayList<Mission>();
+        jobList = M.get(n).getJob();
+        String[] A = jobList.split("\n");
+        String[] B = new String[100];
+        String[] C = new String[100];
+        ArrayList<String[]> JobList = new ArrayList<String[]>();
+        for(int i = 0; i<A.length;i++)
+        {
+            int k = 0;
+            int y = 0;
+            if(A[i].contains("JOB:"))
+            {
+                A[i] = A[i].replace("JOB:","");
+                B[k] = A[i];
+                k++;
+            }
+            if(A[i].contains("JOB Description:"))
+            {
+                A[i] = A[i].replace("JOB:","");
+                C[y] = A[i];
+                y++;
+            }
+        }
+        JobList.add(B);
+        JobList.add(C);
+        return JobList;
+    }
+
+    public ArrayList<String[]> getJobNameList(int n)
+    {
+        String jobList;
+        // Read READ = new Read();
+        // List<Mission> M = new ArrayList<Mission>();
+        jobList = getJob();
+        String[] A = jobList.split("\n");
+        String[] B = new String[100];
+        ArrayList<String[]> JobNameList = new ArrayList<String[]>();
+        int k = 0;
+        for(int i = 0; i<A.length;i++)
+        {
+            //int y = 0;
+            if(A[i].contains("employ title :"))
+            {
+                B[k] = A[i].replace("employ title :","");
+                k++;
+            }
+            if(A[i].contains("number required: "))
+            {
+                B[k] = A[i].replace("number required: ","");;
+                k++;
+            }
+        }
+        JobNameList.add(B);
+        return JobNameList;
     }
 
     public void setMissionID(int missionID) {
@@ -846,4 +935,3 @@ public class Mission
         return cargoRequirements;
     }
 }
-
