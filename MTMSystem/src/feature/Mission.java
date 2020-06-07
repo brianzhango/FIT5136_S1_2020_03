@@ -7,6 +7,8 @@ import org.apache.poi.*;
 import java.io.*;
 import java.util.*;
 import java.text.*;
+
+import login.Menu;
 /**
  * feature.Mission
  *
@@ -79,7 +81,7 @@ public class Mission
         select = display.acceptStringInput("  What do you want to do?（please input number!）\n" +
                 "  1.Create a mission\n" +
                 "  2.Select a mission\n" +
-                "  0.Exit");
+                "  0.Log out");
         i = Judge(select,display);
         if (i == 1){
             handleCreat(list,display,length,joblist,changeNumber);
@@ -116,13 +118,13 @@ public class Mission
                         ad.star();
                         n +=1;
                         break;
-                    }
                 }
             }
+        }
+
     }
-//        if (i == 0) {
-//
-//        }
+
+
     public void handleCreat(List<Mission> list,Display display, int length,List<Job> joblist,int changeNumber) throws EncryptedDocumentException, IOException
     {
         inputID(list,display);
@@ -197,9 +199,9 @@ public class Mission
         return n;
     }
 
-    public int Judge(String select, Display display)
-    {
+    public int Judge(String select, Display display) throws IOException {
         int flag = 0;
+        Menu menu = new Menu();
         while(flag == 0){
             if(select.equals("1"))
             {
@@ -211,7 +213,9 @@ public class Mission
             }
             else if(select.equals("0"))
             {
-                System.exit(0);   // log out
+                //System.exit(0);   // log out
+                //flag = 0;
+                menu.displayMenu();
             }
             else
             {
@@ -238,23 +242,35 @@ public class Mission
     {
         int[] z = new int[2];
         int s = 0;
-        if (select.equals("0"))
+        boolean exit = false;
+        for(;!exit;)
         {
+            n++;
             z = Userselect(list, display, n, joblist, changeNumber);
-            n = z[0] - 1;
+            n = z[0];
             s = z[1];
-            if (s == 1) {
-                handleChange(list, display, n, joblist, changeNumber);
-            }
-            if (s == 2 ) {
-                SpaceShuttle shuttle = new SpaceShuttle();
-                shuttle.selectShuttle();
-            }
-            if (s == 3 ) {
-                Administrator ad = new Administrator(list.get(n).getMissionID() ,list.get(n).getDescription(), getJobNameList(n));
-                ad.star();
+            switch (s) {
+                case 1:
+                    n -= 1;
+                    handleChange(list, display, n, joblist, changeNumber);
+                    break;
+
+                case 2:
+                    n -= 1;
+                    SpaceShuttle shuttle = new SpaceShuttle();
+                    shuttle.selectShuttle();
+                    break;
+
+                case 3:
+                    n -= 1;
+                    setMission(list, n);
+                    Administrator ad = new Administrator(list.get(n).getMissionID(), list.get(n).getDescription(), getJobNameList(n));
+                    ad.star();
+                    //n +=1;
+                    break;
             }
         }
+
     }
 
     public void judgeMC(Display display,List<Mission> list,int location, int p,List<Job> joblist,int changeNumber,String select) throws IOException {
@@ -355,7 +371,6 @@ public class Mission
         }
         setCCI(CCI);
     }
-
 
     public void inputJob (List<Mission> list,List<Job> joblist,int location, int p,int changeNumber) throws IOException {
         Display display = new Display();

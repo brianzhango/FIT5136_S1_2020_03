@@ -254,7 +254,7 @@ public class Administrator {
             a++;
         }
         System.out.println("Please add criteria for the job: " + jobSelected.getJobName() + "You can remove the criteria by input d1 or d2");
-        System.out.println("1. A range of age (18 - 55) : " + selectedMin +"-"+ selectedMax+" Priority: " + priorityAge);
+        System.out.println("1. A range of age (28 - 45) : " + selectedMin +"-"+ selectedMax+" Priority: " + priorityAge);
         System.out.println("2. Years of work experience : " + selectedExp +" Priority: " + priorityExp) ;
         System.out.println("0. Return");
     }
@@ -264,7 +264,7 @@ public class Administrator {
     public ArrayList<Candidates> searchFunction() throws IOException {
         ReadCandidates r = new ReadCandidates();
         List<Candidates> list = new ArrayList<>();
-        list = r.read("/Users/wang8/Desktop/5136/FIT5136_S1_2020_03/MTMSystem/src/Candidate.xlsx");
+        list = r.read("/Users/brianzhang/MTMSystem/src/Candidate.xlsx");
 
         ArrayList<Candidates> candidatesList = new ArrayList<Candidates>();
         int jobNumber = jobs.size();
@@ -319,6 +319,11 @@ public class Administrator {
                     }
                     c++;
                 }
+//                while (c == list.size()-1 && i < Integer.parseInt(selectedNumber)){
+//                    i = Integer.parseInt(selectedNumber);
+//                    System.out.println("Cannot find enough Candidtes for job: " +jobSelected.getJobName());
+//                }
+
             }
             candidatesNumber++;
         }
